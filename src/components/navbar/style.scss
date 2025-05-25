@@ -2,5 +2,162 @@
 
 .navbar
 {
-    
+    &__box
+    {
+        position: fixed;
+        right: 24px;
+        top: 24px;
+        width: 50px;
+        height: 50px;
+        // display: flex;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        background: colors.$light;
+        font-size: 24px;
+        color: colors.$black;
+        transition: all 300ms ease-in-out;
+        cursor: pointer;
+
+        &:hover
+        {
+            background-color: colors.$primary;
+            color: colors.$white;
+        }
+    }
+
+    &__nav
+    {
+        width: calc(100% - 40px);
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo
+    {
+        font-size: 27px;
+        font-weight: 500;
+        letter-spacing: 1.5px;
+        line-height: 150%;
+        color: colors.$white;
+
+        &--color
+        {
+            &-primary
+            {
+                color: colors.$primary;
+            }
+        }
+    }
+
+    &__list
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+
+    &__item
+    {
+        margin: 0 0 0 8px;
+        font-size: 17px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        line-height: 150%;
+        color: colors.$grayLight;
+        cursor: pointer;
+        transition: all 300ms ease-in-out;
+        
+        &:hover
+        {
+            color: colors.$white;
+        }
+
+        &:first-child
+        {
+            margin: 0;
+        }
+    }
+
+    &__link
+    {
+        font-size: 17px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        color: colors.$white;
+        text-decoration: none;
+        border-radius: 5px;
+        background: colors.$primary;
+        padding: 5px 12px;
+        cursor: pointer;
+        transition: all 300ms ease-in-out;
+
+        &:hover
+        {
+            background: colors.$white;
+            color: colors.$black;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .navbar
+    {
+        &__nav
+        {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: calc(100vh - 30px);
+            padding: 15px 0;
+            background: rgba(30, 30, 30, 0.85);
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: all 300ms ease-in-out;
+
+            &--visible
+            {
+                left: 0;
+            }
+        }
+
+        &__box
+        {
+            display: flex;
+            z-index: 100;
+        }
+
+        &__logo
+        {
+            text-align: center;
+            font-size: 32px;
+        }
+
+        &__list
+        {
+            flex-direction: column;
+            margin-top: 30px;
+        }
+
+        &__item
+        {
+            margin: 10px 0 0 0;
+            font-size: 19px;
+        }
+
+        &__link
+        {
+            margin: 40px auto 0 auto;
+            font-size: 20px;
+            padding: 5px 15px;
+        }
+    }
 }

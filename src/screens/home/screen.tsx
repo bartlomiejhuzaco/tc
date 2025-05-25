@@ -3,18 +3,20 @@ import NavbarComponent from '../../components/navbar/component';
 import './style.scss';
 
 export default function HomeScreen() {
-    return <main>
+    return <main className="main">
         <NavbarComponent />
 
-        <section>
+        <section className="section section--background-black section--padding-vertical-30">
+            <div className="home__wrapper">
+
+            </div>
+        </section>
+
+        <section className="section section--background-white section--padding-vertical-30">
 
         </section>
 
-        <section>
-
-        </section>
-
-        <section>
+        <section className="section section--background-black section--padding-vertical-30">
             
         </section>
 

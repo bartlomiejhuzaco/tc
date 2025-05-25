@@ -7,6 +7,57 @@ body
     font-size: 19px;
     font-weight: 400;
     font-family: "Nunito", sans-serif;
-    background: colors.$background;
+    background: colors.$black;
     color: colors.$light;
+}
+
+.main
+{
+    width: 100%;
+    min-height: 100vh;
+}
+
+.section
+{
+    width: 100%;
+    min-height: 50vh;
+
+    &--background
+    {
+        &-black
+        {
+            background: colors.$black;
+        }
+
+        &-white
+        {
+            background: colors.$white;
+        }
+
+        &-dark
+        {
+            background: colors.$dark;
+        }
+    }
+
+    &--padding
+    {
+        &-vertical
+        {
+            &-30
+            {
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
+        }
+
+        &-horizontal
+        {
+            &-30
+            {
+                padding-left: 30px;
+                padding-right: 30px;
+            } 
+        }
+    }
 }
